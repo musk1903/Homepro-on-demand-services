@@ -1,0 +1,37 @@
+<section class="testimonials">
+  <div class="page-width">
+    <div class="section-heading">
+      <p class="eyebrow">Social proof</p>
+      <h2>{{ section.settings.title }}</h2>
+    </div>
+    <div class="testimonial-grid">
+      {% for block in section.blocks %}
+        <blockquote class="testimonial-card" {{ block.shopify_attributes }}>
+          <p>"{{ block.settings.quote }}"</p>
+          <cite>{{ block.settings.author }}</cite>
+        </blockquote>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Testimonials",
+  "settings": [
+    {"type":"text","id":"title","label":"Title","default":"Signals of trust"}
+  ],
+  "blocks": [
+    {
+      "type": "quote",
+      "name": "Quote",
+      "settings": [
+        {"type":"textarea","id":"quote","label":"Quote","default":"The store instantly feels premium and clear. It presents products with confidence."},
+        {"type":"text","id":"author","label":"Author","default":"Creative Review Lens"}
+      ]
+    }
+  ],
+  "max_blocks": 4,
+  "presets": [{"name":"Testimonials","blocks":[{"type":"quote"},{"type":"quote"},{"type":"quote"}]}]
+}
+{% endschema %}

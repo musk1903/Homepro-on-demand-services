@@ -1,0 +1,21 @@
+<section class="collection-products">
+  <div class="page-width">
+    {% paginate collection.products by section.settings.products_per_page %}
+      <div class="product-grid">
+        {% for product in collection.products %}
+          {% render 'card-product', product: product %}
+        {% endfor %}
+      </div>
+      {{ paginate | default_pagination }}
+    {% endpaginate %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Collection products",
+  "settings": [
+    {"type":"range","id":"products_per_page","label":"Products per page","min":4,"max":24,"step":4,"default":12}
+  ]
+}
+{% endschema %}

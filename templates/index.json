@@ -1,0 +1,114 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero-premium",
+      "settings": {
+        "eyebrow": "Elevated Recovery",
+        "heading": "Premium wellness essentials for modern routines.",
+        "copy": "Launch with a category-defining look that feels editorial, commerce-ready, and built to convert from day one.",
+        "primary_label": "Shop featured",
+        "primary_link": "/collections/all",
+        "secondary_label": "Our story",
+        "secondary_link": "#brand-story",
+        "stat_1_value": "4.9/5",
+        "stat_1_label": "Customer satisfaction",
+        "stat_2_value": "48h",
+        "stat_2_label": "Dispatch turnaround",
+        "stat_3_value": "365",
+        "stat_3_label": "Day ritual support"
+      }
+    },
+    "values": {
+      "type": "value-props",
+      "blocks": {
+        "block-1": {
+          "type": "item",
+          "settings": {
+            "title": "Premium Positioning",
+            "text": "Clean hierarchy, rich contrast, and confident messaging built to feel established."
+          }
+        },
+        "block-2": {
+          "type": "item",
+          "settings": {
+            "title": "Conversion Focused",
+            "text": "Commerce sections prioritize trust, benefits, and quick paths into product discovery."
+          }
+        },
+        "block-3": {
+          "type": "item",
+          "settings": {
+            "title": "Brand Ready",
+            "text": "Flexible content fields let you adapt this foundation for wellness, coffee, skincare, or lifestyle."
+          }
+        }
+      },
+      "block_order": ["block-1", "block-2", "block-3"],
+      "settings": {
+        "headline": "Designed to feel like a premium product ecosystem, not a template."
+      }
+    },
+    "featured": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Best sellers",
+        "copy": "Merchandise your top products here once inventory is loaded into the store.",
+        "collection": "",
+        "products_to_show": 4
+      }
+    },
+    "story": {
+      "type": "split-story",
+      "settings": {
+        "eyebrow": "Brand Story",
+        "headline": "Built for brands that want trust, clarity, and premium energy at first glance.",
+        "copy": "This section gives you room to explain your sourcing, product philosophy, or founder story while still keeping a commercial pulse.",
+        "card_title": "Why it works",
+        "card_text": "The layout mixes editorial breathing room with practical conversion cues so the storefront feels upscale without becoming difficult to shop.",
+        "button_label": "Explore collections",
+        "button_link": "/collections/all"
+      }
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "quote-1": {
+          "type": "quote",
+          "settings": {
+            "quote": "The store instantly feels premium and clear. It presents products with confidence.",
+            "author": "Creative Review Lens"
+          }
+        },
+        "quote-2": {
+          "type": "quote",
+          "settings": {
+            "quote": "Strong hierarchy, better merchandising, and a more established visual voice than most test stores.",
+            "author": "Hiring Benchmark"
+          }
+        },
+        "quote-3": {
+          "type": "quote",
+          "settings": {
+            "quote": "A solid ready-to-customize foundation for launching a high-consideration DTC brand.",
+            "author": "eCommerce Perspective"
+          }
+        }
+      },
+      "block_order": ["quote-1", "quote-2", "quote-3"],
+      "settings": {
+        "title": "Signals of trust"
+      }
+    },
+    "rich": {
+      "type": "rich-text",
+      "settings": {
+        "eyebrow": "Launch Checklist",
+        "heading": "To finish the store, plug in products, imagery, policies, and collections.",
+        "text": "<p>The theme is structured to make those last-mile updates quick while keeping the overall art direction intact.</p>",
+        "button_label": "Browse all products",
+        "button_link": "/collections/all"
+      }
+    }
+  },
+  "order": ["hero", "values", "featured", "story", "testimonials", "rich"]
+}

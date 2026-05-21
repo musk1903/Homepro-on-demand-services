@@ -1,0 +1,134 @@
+/* Dark Mode Global Fixes for Homepro */
+
+/* Logo fix */
+.logo-text {
+  @apply text-slate-900 dark:text-slate-50 font-bold text-2xl;
+}
+
+/* Navbar fixes */
+.navbar-button {
+  @apply text-slate-900 dark:text-slate-50 font-medium hover:text-sky-600 dark:hover:text-sky-400;
+}
+
+.navbar-bg {
+  @apply bg-white/95 dark:bg-slate-900/95 backdrop-blur border-slate-200 dark:border-slate-800;
+}
+
+/* Hero section fixes */
+.hero-h1 {
+  @apply text-slate-900 dark:text-slate-50;
+}
+
+.hero-p {
+  @apply text-slate-600 dark:text-slate-300;
+}
+
+/* Button global overrides - keep shadcn specificity but fix contrast */
+button[data-slot="button"]:not([data-state="checked"]):not([data-state="active"]) {
+  @apply bg-sky-600 hover:bg-sky-700 text-white dark:bg-sky-500 dark:hover:bg-sky-400;
+}
+
+button[data-slot="button"][variant="outline"] {
+  @apply border-slate-200 text-slate-900 hover:bg-slate-100 dark:border-slate-700 dark:text-slate-100 dark:hover:bg-slate-800;
+}
+
+button[data-slot="button"][variant="secondary"] {
+  @apply bg-slate-100 text-slate-900 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-100 dark:hover:bg-slate-700;
+}
+
+/* Date/Time buttons in BookingDialog */
+.date-button {
+  @apply border-slate-200 bg-white text-slate-600 hover:bg-slate-100 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800;
+}
+
+.selected-date {
+  @apply border-sky-600 bg-sky-50 text-sky-700 dark:bg-sky-900/50 dark:text-sky-300 dark:border-sky-500;
+}
+
+/* LiveDateTime fix */
+.live-datetime {
+  @apply bg-white border-slate-200 text-slate-600 dark:bg-slate-900 dark:border-slate-700 dark:text-slate-200;
+}
+
+/* Card headers and titles */
+.card-title {
+  @apply text-slate-900 dark:text-slate-50;
+}
+
+.card-description {
+  @apply text-slate-600 dark:text-slate-300;
+}
+
+/* Badge fixes */
+.badge-default {
+  @apply bg-sky-100 text-sky-700 dark:bg-sky-900/50 dark:text-sky-300;
+}
+
+.badge-secondary {
+  @apply bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300;
+}
+
+/* Service cards */
+.service-icon-bg {
+  @apply bg-sky-100 text-sky-700 dark:bg-sky-900 dark:text-sky-300;
+}
+
+/* Scroll-to-top */
+.scroll-top {
+  @apply bg-slate-900 text-white dark:bg-slate-800 dark:text-white;
+}
+
+/* Auth page specific */
+.auth-toggle-selected {
+  @apply bg-white text-slate-900 dark:bg-slate-900 dark:text-slate-50 shadow-sm;
+}
+
+.auth-toggle-unselected {
+  @apply text-slate-500 dark:text-slate-400;
+}
+
+/* Footer */
+.footer {
+  @apply text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800;
+}
+
+/* Input fields */
+.input-field {
+  @apply bg-white border-slate-200 text-slate-900 dark:bg-slate-900 dark:border-slate-700 dark:text-slate-50;
+}
+
+/* Responsive navbar mobile menu */
+.mobile-menu-bg {
+  @apply bg-white border-slate-200 dark:bg-slate-900 dark:border-slate-800;
+}
+
+/* Quantity stepper */
+.quantity-bg {
+  @apply bg-white border-slate-200 dark:bg-slate-900 dark:border-slate-700;
+}
+
+/* Card backgrounds */
+.card-slate-bg {
+  @apply bg-slate-50 dark:bg-slate-900/50;
+}
+
+/* Star ratings */
+.star-inactive {
+  @apply text-slate-300 dark:text-slate-600;
+}
+
+/* Map iframe */
+.map-iframe {
+  @apply border-slate-200 bg-white dark:border-slate-700 dark:bg-slate-900;
+}
+
+/* Separator */
+.separator {
+  @apply border-slate-200 dark:border-slate-700;
+}
+
+/* Loading states */
+.skeleton-bg {
+  @apply bg-slate-100 dark:bg-slate-800;
+}
+

@@ -1,0 +1,46 @@
+<section class="hero-premium">
+  <div class="page-width hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">{{ section.settings.eyebrow }}</p>
+      <h1>{{ section.settings.heading }}</h1>
+      <div class="hero-text rte">{{ section.settings.copy }}</div>
+      <div class="hero-actions">
+        <a class="button" href="{{ section.settings.primary_link }}">{{ section.settings.primary_label }}</a>
+        <a class="button button--ghost" href="{{ section.settings.secondary_link }}">{{ section.settings.secondary_label }}</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-panel">
+        <p>Crafted for premium wellness, lifestyle, and specialty product launches.</p>
+        <div class="hero-orbit"></div>
+      </div>
+      <div class="hero-stats">
+        <div><strong>{{ section.settings.stat_1_value }}</strong><span>{{ section.settings.stat_1_label }}</span></div>
+        <div><strong>{{ section.settings.stat_2_value }}</strong><span>{{ section.settings.stat_2_label }}</span></div>
+        <div><strong>{{ section.settings.stat_3_value }}</strong><span>{{ section.settings.stat_3_label }}</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Hero premium",
+  "settings": [
+    {"type":"text","id":"eyebrow","label":"Eyebrow","default":"Elevated Recovery"},
+    {"type":"text","id":"heading","label":"Heading","default":"Premium wellness essentials for modern routines."},
+    {"type":"richtext","id":"copy","label":"Copy","default":"<p>Launch with a category-defining look that feels editorial, commerce-ready, and built to convert from day one.</p>"},
+    {"type":"text","id":"primary_label","label":"Primary label","default":"Shop featured"},
+    {"type":"url","id":"primary_link","label":"Primary link"},
+    {"type":"text","id":"secondary_label","label":"Secondary label","default":"Our story"},
+    {"type":"url","id":"secondary_link","label":"Secondary link"},
+    {"type":"text","id":"stat_1_value","label":"Stat 1 value","default":"4.9/5"},
+    {"type":"text","id":"stat_1_label","label":"Stat 1 label","default":"Customer satisfaction"},
+    {"type":"text","id":"stat_2_value","label":"Stat 2 value","default":"48h"},
+    {"type":"text","id":"stat_2_label","label":"Stat 2 label","default":"Dispatch turnaround"},
+    {"type":"text","id":"stat_3_value","label":"Stat 3 value","default":"365"},
+    {"type":"text","id":"stat_3_label","label":"Stat 3 label","default":"Day ritual support"}
+  ],
+  "presets": [{"name":"Hero premium"}]
+}
+{% endschema %}

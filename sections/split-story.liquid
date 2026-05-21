@@ -1,0 +1,31 @@
+<section id="brand-story" class="split-story">
+  <div class="page-width split-story-grid">
+    <div>
+      <p class="eyebrow">{{ section.settings.eyebrow }}</p>
+      <h2>{{ section.settings.headline }}</h2>
+      <p class="section-copy">{{ section.settings.copy }}</p>
+      <a class="text-link text-link--strong" href="{{ section.settings.button_link }}">{{ section.settings.button_label }}</a>
+    </div>
+    <aside class="story-card">
+      <p class="eyebrow">Strategy</p>
+      <h3>{{ section.settings.card_title }}</h3>
+      <p>{{ section.settings.card_text }}</p>
+    </aside>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Split story",
+  "settings": [
+    {"type":"text","id":"eyebrow","label":"Eyebrow","default":"Brand Story"},
+    {"type":"text","id":"headline","label":"Headline","default":"Built for brands that want trust, clarity, and premium energy at first glance."},
+    {"type":"textarea","id":"copy","label":"Copy","default":"This section gives you room to explain your sourcing, product philosophy, or founder story while still keeping a commercial pulse."},
+    {"type":"text","id":"card_title","label":"Card title","default":"Why it works"},
+    {"type":"textarea","id":"card_text","label":"Card text","default":"The layout mixes editorial breathing room with practical conversion cues so the storefront feels upscale without becoming difficult to shop."},
+    {"type":"text","id":"button_label","label":"Button label","default":"Explore collections"},
+    {"type":"url","id":"button_link","label":"Button link"}
+  ],
+  "presets": [{"name":"Split story"}]
+}
+{% endschema %}

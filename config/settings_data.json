@@ -1,0 +1,34 @@
+{
+  "current": {
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "menu": "",
+          "cta_label": "Shop all",
+          "cta_link": "/collections/all"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {
+          "headline": "Build rituals your body thanks you for.",
+          "subtext": "Designed to feel elevated, perform daily, and gift beautifully."
+        }
+      }
+    },
+    "content_for_index": [
+      "hero",
+      "values",
+      "featured",
+      "story",
+      "testimonials",
+      "rich"
+    ],
+    "brand_tagline": "Performance wellness, reimagined.",
+    "accent_color": "#c96f4a",
+    "surface_color": "#f7f1e8",
+    "text_color": "#1d1b18",
+    "announcement_text": "Free shipping on orders over $120"
+  }
+}

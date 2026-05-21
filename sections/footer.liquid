@@ -1,0 +1,25 @@
+<footer class="site-footer">
+  <div class="page-width footer-grid">
+    <div>
+      <p class="footer-eyebrow">Premium storefront foundation</p>
+      <h2>{{ section.settings.headline }}</h2>
+      <p>{{ section.settings.subtext }}</p>
+    </div>
+    <div class="footer-links">
+      <a href="/collections/all">Shop all</a>
+      <a href="/pages/shipping-policy">Shipping</a>
+      <a href="/pages/privacy-policy">Privacy</a>
+      <a href="/pages/contact">Contact</a>
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [
+    {"type": "text", "id": "headline", "label": "Headline", "default": "Build rituals your body thanks you for."},
+    {"type": "textarea", "id": "subtext", "label": "Subtext", "default": "Designed to feel elevated, perform daily, and gift beautifully."}
+  ]
+}
+{% endschema %}

@@ -1,0 +1,37 @@
+<header class="site-header">
+  <div class="announcement-bar">
+    <p>{{ settings.announcement_text }}</p>
+  </div>
+  <div class="header-shell page-width">
+    <a class="brand-mark" href="{{ routes.root_url }}">
+      <span>{{ shop.name }}</span>
+      <small>{{ settings.brand_tagline }}</small>
+    </a>
+    <nav class="header-nav" aria-label="Primary">
+      {% if section.settings.menu != blank %}
+        {% for link in linklists[section.settings.menu].links %}
+          <a href="{{ link.url }}">{{ link.title }}</a>
+        {% endfor %}
+      {% else %}
+        <a href="/collections/all">Shop</a>
+        <a href="/pages/about">About</a>
+        <a href="/pages/contact">Contact</a>
+      {% endif %}
+    </nav>
+    <div class="header-actions">
+      <a class="text-link" href="{{ routes.search_url }}">Search</a>
+      <a class="button button--small" href="{{ section.settings.cta_link }}">{{ section.settings.cta_label }}</a>
+    </div>
+  </div>
+</header>
+
+{% schema %}
+{
+  "name": "Header",
+  "settings": [
+    {"type": "link_list", "id": "menu", "label": "Menu"},
+    {"type": "text", "id": "cta_label", "label": "CTA label", "default": "Shop all"},
+    {"type": "url", "id": "cta_link", "label": "CTA link"}
+  ]
+}
+{% endschema %}

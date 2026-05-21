@@ -1,0 +1,24 @@
+<section class="rich-text-section">
+  <div class="page-width rich-text-panel">
+    <p class="eyebrow">{{ section.settings.eyebrow }}</p>
+    <h2>{{ section.settings.heading }}</h2>
+    <div class="rte">{{ section.settings.text }}</div>
+    {% if section.settings.button_label != blank %}
+      <a class="button" href="{{ section.settings.button_link }}">{{ section.settings.button_label }}</a>
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Rich text",
+  "settings": [
+    {"type":"text","id":"eyebrow","label":"Eyebrow","default":"Launch Checklist"},
+    {"type":"text","id":"heading","label":"Heading","default":"To finish the store, plug in products, imagery, policies, and collections."},
+    {"type":"richtext","id":"text","label":"Text","default":"<p>The theme is structured to make those last-mile updates quick while keeping the overall art direction intact.</p>"},
+    {"type":"text","id":"button_label","label":"Button label","default":"Browse all products"},
+    {"type":"url","id":"button_link","label":"Button link"}
+  ],
+  "presets": [{"name":"Rich text"}]
+}
+{% endschema %}

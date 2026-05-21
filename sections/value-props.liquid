@@ -1,0 +1,37 @@
+<section class="value-props">
+  <div class="page-width">
+    <div class="section-heading">
+      <p class="eyebrow">Why this direction</p>
+      <h2>{{ section.settings.headline }}</h2>
+    </div>
+    <div class="value-grid">
+      {% for block in section.blocks %}
+        <article class="value-card" {{ block.shopify_attributes }}>
+          <h3>{{ block.settings.title }}</h3>
+          <p>{{ block.settings.text }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Value props",
+  "settings": [
+    {"type":"text","id":"headline","label":"Headline","default":"Designed to feel like a premium product ecosystem, not a template."}
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Item",
+      "settings": [
+        {"type":"text","id":"title","label":"Title","default":"Premium Positioning"},
+        {"type":"textarea","id":"text","label":"Text","default":"Clean hierarchy, rich contrast, and confident messaging built to feel established."}
+      ]
+    }
+  ],
+  "max_blocks": 4,
+  "presets": [{"name":"Value props","blocks":[{"type":"item"},{"type":"item"},{"type":"item"}]}]
+}
+{% endschema %}

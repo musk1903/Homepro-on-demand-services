@@ -1,0 +1,41 @@
+<section class="featured-collection">
+  <div class="page-width">
+    <div class="section-heading section-heading--split">
+      <div>
+        <p class="eyebrow">Featured collection</p>
+        <h2>{{ section.settings.title }}</h2>
+      </div>
+      <p>{{ section.settings.copy }}</p>
+    </div>
+    <div class="product-grid">
+      {% assign featured_collection = collections[section.settings.collection] %}
+      {% if featured_collection != blank %}
+        {% for product in featured_collection.products limit: section.settings.products_to_show %}
+          {% render 'card-product', product: product %}
+        {% endfor %}
+      {% else %}
+        {% for i in (1..section.settings.products_to_show) %}
+          <article class="product-card product-card--placeholder">
+            <div class="product-media placeholder-shape"></div>
+            <h3>Sample Product {{ i }}</h3>
+            <p>Replace with actual Shopify products to complete merchandising.</p>
+            <span class="price">$99.00</span>
+          </article>
+        {% endfor %}
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Featured collection",
+  "settings": [
+    {"type":"text","id":"title","label":"Title","default":"Best sellers"},
+    {"type":"textarea","id":"copy","label":"Copy","default":"Merchandise your top products here once inventory is loaded into the store."},
+    {"type":"collection","id":"collection","label":"Collection"},
+    {"type":"range","id":"products_to_show","label":"Products to show","min":2,"max":8,"step":1,"default":4}
+  ],
+  "presets": [{"name":"Featured collection"}]
+}
+{% endschema %}
